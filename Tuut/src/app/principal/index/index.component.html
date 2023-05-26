@@ -1,0 +1,31 @@
+
+  <section>
+  <div class="d-flex justify-content-between">
+    <h4>List preguntas</h4>
+    <a routerLink="/principal/create" class="btn btn-success">Agregar preguntas</a>
+  </div>
+
+  <br>
+
+  <table class="table ">
+    <tr>
+      <th>ID</th>
+      <th>PREGUNTA</th>
+      <th>COMPLEMENTO</th>
+      <th>SECCION</th>
+      <th width="220px">Action</th>
+    </tr>
+    <tr *ngFor="let prin of prins">
+      <td>{{ prin.id }}</td>
+      <td>{{ prin.pregunta }}</td>
+      <td>{{ prin.complemento }}</td>
+      <td>{{ prin.seccion }}</td>
+      <td>
+        <a href="#" [routerLink]="['/principal/', 'edit', prin.id  ]" class="btn btn-primary">Edit</a>
+        <button type="button" (click)="deletePrin(prin.id)" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </table>
+
+</section>
+
