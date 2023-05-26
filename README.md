@@ -21,7 +21,7 @@
 ## comandos
 
 ## composer install
-## php artisan key:generate
 ## npm install
 ## npm run dev
+## php artisan key:generate
 ## php artisan migrate:refresh --seed
