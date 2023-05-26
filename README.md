@@ -10,9 +10,9 @@
 ## npm i o install
 
 # Requerimientos Laravel
-## Laravel:  Versión 8.x
+## Laravel:  Versión  9.52.7
 ## Composer: Versión 2.5.5
-## PHP: Versión 7.3
+## PHP: Versión 8.0.2
 ## Apache2.4 
 ## MySQL: Versión 5.7
 
