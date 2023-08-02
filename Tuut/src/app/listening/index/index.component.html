@@ -1,0 +1,35 @@
+<div class="container">
+  <section>
+    <div class="d-flex justify-content-between">
+      <h4>Sección Listening</h4>
+      <a routerLink="/listening/create" class="fas fa-warehouse ml-2"></a>
+    </div>
+    <br>
+    <table class="table ">
+      <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>PREGUNTA</th>
+        <th>COMPLEMENTO</th>
+        <th width="130px">RESPUESTA A</th>
+        <th width="130px">RESPUESTA B</th>
+        <th width="130px">RESPUESTA C</th>
+        <th width="100px">MODIFICAR</th>
+      </tr>
+    </thead>
+      <tr *ngFor="let list of lists">
+        <td>{{ list.id }}</td>
+        <td>{{ list.pregunta }}</td>
+        <td>{{ list.complemento }}</td>
+        <td class="text-success">{{ list.respuestaA }}</td>
+        <td>{{ list.respuestaB }}</td>
+        <td>{{ list.respuestaC }}</td>
+        <td>
+          <a href="#" [routerLink]="['/listening/', 'edit', list.id  ]" class="fas fa-chalkboard ml-2"></a>
+          <a (click)="deleteList(list.id)" class="fas fa-trash ml-2"></a>
+        </td>
+      </tr>
+    </table>
+
+  </section>
+  </div>

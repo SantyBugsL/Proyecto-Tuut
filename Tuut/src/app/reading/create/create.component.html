@@ -1,0 +1,87 @@
+<div class="container">
+<div>
+  <div class="d-flex justify-content-between">
+    <h4>Agrega pregunta</h4>
+    <a href="#" routerLink="/reading/index" class="fas fa-warehouse ml-2"></a>
+  </div>
+  <hr/>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-group row">
+            <div class="col-md-12 ">
+              <label for="pregunta">Pregunta:</label>
+              <input
+                formControlName="pregunta"
+                id="pregunta"
+                type="text"
+                class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12 ">
+              <label for="complemento">Complemento:</label>
+              <input
+                formControlName="complemento"
+                id="complemento"
+                type="text"
+                class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-md-12 ">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+              <label for="respuestaA">Respuesta A:</label>
+            </div>
+            <input
+              formControlName="respuestaA"
+              id="respuestaA"
+              type="text"
+              class="form-control">
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-md-12 ">
+          <label for="respuestaB">Respuesta B:</label>
+          <input
+            formControlName="respuestaB"
+            id="respuestaB"
+            type="text"
+            class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-12 ">
+        <label for="respuestaC">Respuesta C:</label>
+        <input
+          formControlName="respuestaC"
+          id="respuestaC"
+          type="text"
+          class="form-control">
+      </div>
+  </div>
+        <div class="form-group row">
+            <div class="col-md-12 ">
+              <label for="seccion">Seccion:</label>
+              <br>
+              <select formControlName="seccion"
+              id="seccion"
+              class="form-control form-control-alternative"
+              aria-describedby="CursoFeedback" required>
+          <!-- <option selected disabled value="">seccion</option> -->
+                <option>Writing</option>
+                <option>Reading</option>
+                <option>Listening</option>
+                <option>Speaking</option>
+                <option>Grammar</option>
+                <option>Vocabulary</option>
+             </select>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Guardar</button>
+    </form>
+</div>
+</div>

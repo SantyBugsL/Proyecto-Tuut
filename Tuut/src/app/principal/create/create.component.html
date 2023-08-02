@@ -1,0 +1,61 @@
+<div class="container">
+<div>
+
+  <div class="d-flex justify-content-between">
+    <h4>Agrega pregunta</h4>
+    <a href="#" routerLink="/principal/index2" class="btn btn-primaryt">Retrocede</a>
+  </div>
+
+  <hr/>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="pregunta">Pregunta:</label>
+              <input
+                formControlName="pregunta"
+                id="pregunta"
+                type="text"
+                class="form-control">
+              <div *ngIf="f.pregunta.touched && f.pregunta.invalid" class="alert alert-danger">
+                  <div *ngIf="f.pregunta.errors.required">*Pregunta requerido.</div>
+                  <div *ngIf="f.pregunta.errors.pattern">*La pregunta tiene simbolos o caracteres.</div>
+              </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="complemento">Complemento:</label>
+              <input
+                formControlName="complemento"
+                id="complemento"
+                type="text"
+                class="form-control">
+              <div *ngIf="f.complemento.touched && f.complemento.invalid" class="alert alert-danger">
+                  <div *ngIf="f.complemento.errors.required">*Multimedia requerido.</div>
+                  <div *ngIf="f.complemento.errors.complemento">*Multimedia excede el 5 MB.</div>
+              </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="seccion">Seccion:</label>
+              <input
+                formControlName="seccion"
+                id="seccion"
+                type="text"
+                class="form-control">
+              <div *ngIf="f.seccion.touched && f.seccion.invalid" class="alert alert-danger">
+                  <div *ngIf="f.seccion.errors.required">*Seccion requerido.</div>
+                  <div *ngIf="f.seccion.errors.pattern">*La seccion no existe.</div>
+              </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Guardar</button>
+    </form>
+</div>
+</div>

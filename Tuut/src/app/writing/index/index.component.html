@@ -1,0 +1,34 @@
+<div class="container">
+  <section>
+    <div class="d-flex justify-content-between">
+      <h4>Sección Writing</h4>
+      <a routerLink="/writing/create" class="fas fa-warehouse ml-2"></a>
+    </div>
+    <br>
+    <table class="table ">
+      <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>PREGUNTA</th>
+        <th>COMPLEMENTO</th>
+        <th width="130px">RESPUESTA A</th>
+        <th width="130px">RESPUESTA B</th>
+        <th width="130px">RESPUESTA C</th>
+        <th width="100px">MODIFICAR</th>
+      </tr>
+    </thead>
+      <tr *ngFor="let wri of wris">
+        <td>{{ wri.id }}</td>
+        <td>{{ wri.pregunta }}</td>
+        <td>{{ wri.complemento }}</td>
+        <td class="text-success">{{ wri.respuestaA }}</td>
+        <td>{{ wri.respuestaB }}</td>
+        <td>{{ wri.respuestaC }}</td>
+        <td>
+          <a href="#" [routerLink]="['/writing/', 'edit', wri.id  ]" class="fas fa-chalkboard ml-2"></a>
+          <a (click)="deleteWri(wri.id)" class="fas fa-trash ml-2"></a>
+        </td>
+      </tr>
+    </table>
+  </section>
+  </div>

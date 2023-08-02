@@ -1,0 +1,34 @@
+<div class="container">
+  <section>
+    <div class="d-flex justify-content-between">
+      <h4>Sección Speaking</h4>
+      <a routerLink="/speaking/create" class="fas fa-warehouse ml-2"></a>
+    </div>
+    <br>
+    <table class="table ">
+      <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>PREGUNTA</th>
+        <th>COMPLEMENTO</th>
+        <th width="130px">RESPUESTA A</th>
+        <th width="130px">RESPUESTA B</th>
+        <th width="130px">RESPUESTA C</th>
+        <th width="100px">MODIFICAR</th>
+      </tr>
+    </thead>
+      <tr *ngFor="let spea of speas">
+        <td>{{ spea.id }}</td>
+        <td>{{ spea.pregunta }}</td>
+        <td>{{ spea.complemento }}</td>
+        <td class="text-success">{{ spea.respuestaA }}</td>
+        <td>{{ spea.respuestaB }}</td>
+        <td>{{ spea.respuestaC }}</td>
+        <td>
+          <a href="#" [routerLink]="['/speaking/', 'edit', spea.id  ]" class="fas fa-chalkboard ml-2"></a>
+          <a (click)="deleteSpea(spea.id)" class="fas fa-trash ml-2"></a>
+        </td>
+      </tr>
+    </table>
+  </section>
+  </div>

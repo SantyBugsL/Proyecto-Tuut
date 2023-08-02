@@ -1,0 +1,130 @@
+<div class="container">
+
+  <div class="d-flex justify-content-between">
+    <h4>Evaluacion</h4>
+    <a href="#" routerLink="/evaluacion/index" class="btn btn-primaryt">Finalizar</a>
+  </div>
+
+  <hr>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <div class="form-group row">
+          <div class="col-md-12 ">
+            <label for="pregunta">PREGUNTA</label>
+            <input
+              formControlName="pregunta"
+              [(ngModel)]="eva.pregunta"
+              id="pregunta"
+              type="text"
+              class="form-control" disabled readonly>
+            </div>
+          </div>
+
+        <!---
+      <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="complemento">Complemento:</label>
+            <input
+              formControlName="complemento"
+              [(ngModel)]="eva.complemento"
+              id="complemento"
+              type="text"
+              class="form-control">
+          </div>
+      </div>
+        -->
+        <br>
+        <br>
+
+      <div class="form-group row">
+        <div class="col-md-6 ">
+          <input class="form-check-input" class="col-md-1 " type="checkbox">
+          <input class="col-md-3" disabled readonly
+            [(ngModel)]="eva.respuestaA"
+            formControlName="respuestaA"
+            id="respuestaA"
+            type="text">
+        </div>
+    </div>
+
+          <div class="form-group row">
+            <div class="col-md-6 ">
+              <input class="form-check-input" class="col-md-1 " type="checkbox">
+              <input class="col-md-3" disabled readonly
+                [(ngModel)]="eva.respuestaB"
+                formControlName="respuestaB"
+                id="respuestaB"
+                type="text">
+            </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-md-6 ">
+            <input class="form-check-input" class="col-md-1 " type="checkbox">
+            <input class="col-md-3" disabled readonly
+              [(ngModel)]="eva.respuestaC"
+              formControlName="respuestaC"
+              id="respuestaC"
+              type="text">
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-md-6 ">
+          <input class="form-check-input" class="col-md-1 " type="checkbox">
+          <input class="col-md-3" disabled readonly
+            [(ngModel)]="eva.respuestaD"
+            formControlName="respuestaD"
+            id="respuestaD"
+            type="text">
+        </div>
+    </div>
+
+       <!---
+      <div class="form-group row">
+          <div class="col-md-6 ">
+            <input class="form-check-input" class="col-md-1 " type="checkbox">
+            <input class="col-md-3" disabled readonly
+              [(ngModel)]="eva.seccion"
+              formControlName="seccion"
+              id="seccion"
+              type="text">
+          </div>
+      </div>
+      -->
+
+      <!---
+      <button class="btn btn-primary" type="submit" >Actualizar</button>
+      -->
+
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="evaluacion/edit/1">1</a></li>
+      <li class="page-item"><a class="page-link" href="evaluacion/edit/2">2</a></li>
+      <li class="page-item"><a class="page-link" href="evaluacion/edit/3">3</a></li>
+      <li class="page-item"><a class="page-link" href="evaluacion/edit/4">4</a></li>
+      <li class="page-item"><a class="page-link" href="evaluacion/edit/5">5</a></li>
+      <li class="page-item"><a class="page-link" href="evaluacion/edit/6">6</a></li>
+      <li class="page-item"><a class="page-link" href="evaluacion/edit/7">7</a></li>
+      <li class="page-item"><a class="page-link" href="evaluacion/edit/8">8</a></li>
+      <li class="page-item"><a class="page-link" href="evaluacion/edit/9">9</a></li>
+      <li class="page-item"><a class="page-link" href="evaluacion/edit/10">10</a></li>
+
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+</div>

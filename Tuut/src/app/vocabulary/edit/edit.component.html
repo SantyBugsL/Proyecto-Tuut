@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h4>Editar pregunta</h4>
+    <a href="#" routerLink="/vocabulary/index" class="fas fa-warehouse ml-2"></a>
+  </div>
+  <hr>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-group row">
+          <div class="col-md-12 ">
+            <label for="pregunta">Pregunta:</label>
+            <input
+              formControlName="pregunta"
+              [(ngModel)]="vocab.pregunta"
+              id="pregunta"
+              type="text"
+              class="form-control">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <div class="col-md-12 ">
+            <label for="complemento">Complemento:</label>
+            <input
+              formControlName="complemento"
+              [(ngModel)]="vocab.complemento"
+              id="complemento"
+              type="text"
+              class="form-control">
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-md-12 ">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+            <label for="respuestaA">Respuesta A:</label>
+          </div>
+          <input
+            formControlName="respuestaA"
+            [(ngModel)]="vocab.respuestaA"
+            id="respuestaA"
+            type="text"
+            class="form-control">
+        </div>
+    </div>
+
+          <div class="form-group row">
+            <div class="col-md-12 ">
+              <label for="respuestaB">Respuesta B:</label>
+              <input
+                formControlName="respuestaB"
+                [(ngModel)]="vocab.respuestaB"
+                id="respuestaB"
+                type="text"
+                class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-md-12 ">
+            <label for="respuestaC">Respuesta C:</label>
+            <input
+              formControlName="respuestaC"
+              [(ngModel)]="vocab.respuestaC"
+              id="respuestaC"
+              type="text"
+              class="form-control">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <div class="col-md-12 ">
+            <label for="seccion">Seccion:</label>
+            <input
+              [(ngModel)]="vocab.seccion"
+              formControlName="seccion"
+              id="seccion"
+              type="text"
+              class="form-control">
+
+          </div>
+      </div>
+
+      <button class="btn btn-primary" type="submit" >Actualizar</button>
+  </form>
+</div>

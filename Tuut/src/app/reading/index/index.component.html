@@ -1,0 +1,35 @@
+<div class="container">
+  <section>
+    <div class="d-flex justify-content-between">
+      <h4>Sección Reading</h4>
+      <a routerLink="/reading/create" class="fas fa-warehouse ml-2"></a>
+    </div>
+    <br>
+    <table class="table ">
+      <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>PREGUNTA</th>
+        <th>COMPLEMENTO</th>
+        <th width="130px">RESPUESTA A</th>
+        <th width="130px">RESPUESTA B</th>
+        <th width="130px">RESPUESTA C</th>
+        <th width="100px">MODIFICAR</th>
+      </tr>
+    </thead>
+      <tr *ngFor="let rea of reas">
+        <td>{{ rea.id }}</td>
+        <td>{{ rea.pregunta }}</td>
+        <td>{{ rea.complemento }}</td>
+        <td class="text-success">{{ rea.respuestaA }}</td>
+        <td>{{ rea.respuestaB }}</td>
+        <td>{{ rea.respuestaC }}</td>
+        <td>
+          <a href="#" [routerLink]="['/reading/', 'edit', rea.id  ]" class="fas fa-chalkboard ml-2"></a>
+          <a (click)="deleteRea(rea.id)" class="fas fa-trash ml-2"></a>
+        </td>
+      </tr>
+    </table>
+
+  </section>
+  </div>

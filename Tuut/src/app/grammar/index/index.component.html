@@ -1,0 +1,35 @@
+<div class="container">
+  <section>
+    <div class="d-flex justify-content-between">
+      <h4>Sección Grammar</h4>
+      <a routerLink="/grammar/create" class="fas fa-warehouse ml-2"></a>
+    </div>
+    <br>
+    <table class="table ">
+      <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>PREGUNTA</th>
+        <th>COMPLEMENTO</th>
+        <th width="130px">RESPUESTA A</th>
+        <th width="130px">RESPUESTA B</th>
+        <th width="130px">RESPUESTA C</th>
+        <th width="100px">MODIFICAR</th>
+      </tr>
+    </thead>
+      <tr *ngFor="let gra of gras">
+        <td>{{ gra.id }}</td>
+        <td>{{ gra.pregunta }}</td>
+        <td>{{ gra.complemento }}</td>
+        <td class="text-success">{{ gra.respuestaA }}</td>
+        <td>{{ gra.respuestaB }}</td>
+        <td>{{ gra.respuestaC }}</td>
+        <td>
+          <a href="#" [routerLink]="['/grammar/', 'edit', gra.id  ]" class="fas fa-chalkboard ml-2"></a>
+          <a (click)="deleteGra(gra.id)" class="fas fa-trash ml-2"></a>
+        </td>
+      </tr>
+    </table>
+  </section>
+  </div>
+
